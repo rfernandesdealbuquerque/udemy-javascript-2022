@@ -1,5 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
 .show-modal {
   display: inline-block;
-  text-align: center;
   justify-content: space-around;
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #fff;
+  padding: 10px 20px;
+  margin: 5rem 2rem;
+  border-radius: 150px;
+  border: none;
+  cursor: pointer;
+  position: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  word-spacing: 2px;
+}
+
+.btn-close-modal {
+  top: 1.2rem;
+  right: 2rem;
+  cursor: pointer;
+  background: none;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  border: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 50px;
+  width: 500px;
+  text-align: left;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+}
+.hidden {
+  display: none;
 }

@@ -67,6 +67,7 @@ const checkGuess = function () {
     document.querySelector('.message-start-guessing').textContent =
       guess > number ? '❌ Too high!' : '❌ Too low!';
     decreaseScore();
+    checkScoreIsZero();
   }
 };
 
@@ -84,5 +85,3 @@ const resetGame = function () {
 document.querySelector('.btn-check').addEventListener('click', checkGuess);
 
 document.querySelector('.btn-again').addEventListener('click', resetGame);
-
-checkScoreIsZero();
