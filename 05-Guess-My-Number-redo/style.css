@@ -1,0 +1,44 @@
+h1,
+h2 {
+  color: azure;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(48, 44, 44);
+}
+.number {
+  height: 60px;
+  width: 60px;
+  background-color: azure;
+  position: absolute;
+  left: 900px;
+  top: 130px;
+  font-size: large;
+  text-align: center;
+}
+main {
+  height: 500px;
+}
+
+input {
+  height: 50px;
+  width: 100px;
+}
+
+.left {
+  background-color: rgb(48, 44, 44);
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  height: 200px;
+}
+
+.right {
+  position: absolute;
+  top: 200px;
+  left: 1300px;
+  height: 200px;
+  width: 200px;
+  color: aliceblue;
+}

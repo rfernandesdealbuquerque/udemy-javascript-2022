@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #75b6a0;
+  font-family: Arial; /* inherited property by child elements - font properties are usually inherited*/
+  font-size: 20px;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#your-name {
+  background-color: beige;
+  border: 3px solid black;
+  padding: 20px;
+  margin-top: 30px;
+}
