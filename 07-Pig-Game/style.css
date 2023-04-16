@@ -81,7 +81,7 @@ button {
   left: 500px;
   border: aliceblue;
   cursor: pointer;
-  background-color: bisque;
+  background-color: rgb(245, 244, 244);
 }
 
 .btn-roll-dice {
