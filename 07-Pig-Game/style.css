@@ -1,46 +1,104 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-html {
   box-sizing: border-box;
 }
+
 body {
   background: linear-gradient(to top left, #d2042d, #800020);
-  height: 800px;
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
+  height: 1000px;
 }
 
 .game-box {
-  background: aliceblue;
-  height: 450px;
-  width: 600px;
-  border-radius: 3%;
+  background-color: rgb(231, 179, 176);
   position: absolute;
-  filter: blur();
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
+  top: 150px;
+  left: 330px;
+  height: 700px;
+  width: 1200px;
+  border-radius: 15px;
+}
+.player {
+  display: inline-block;
 }
 
-.player1-side {
-  border-right: solid 1px;
-  padding: 104px;
+.player-1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 50px;
+  padding-left: 160px;
+  height: 100%;
+  width: 49%;
 }
 
-.player2-side {
-  padding: 104px;
-  border-left: solid 0px;
+.player-2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 50px;
+  padding-left: 150px;
+  height: 100%;
+  width: 49%;
 }
 
-.player1-container {
-  margin-bottom: 200px;
+.name {
+  margin-bottom: 20px;
+  margin-left: 30px;
+  font-size: 40px;
 }
 
-.player2-container {
-  margin-bottom: 200px;
+.score {
+  position: relative;
+  left: 100px;
+  top: 25px;
+  color: #800020;
+  font-size: 50px;
+  font: bold;
+}
+
+.current {
+  background-color: #d2042d;
+  height: 150px;
+  width: 250px;
+  position: relative;
+  top: 300px;
+  border-radius: 20px;
+  font-size: x-large;
+  font-weight: 100;
+  color: aliceblue;
+}
+
+.current-label {
+  position: relative;
+  top: 10px;
+  left: 83px;
+}
+
+button {
+  position: absolute;
+  top: 50px;
+  width: 150px;
+  height: 40px;
+  border-radius: 30px;
+  font-size: 15px;
+  left: 500px;
+  border: aliceblue;
+  cursor: pointer;
+  background-color: bisque;
+}
+
+.btn-roll-dice {
+  top: 480px;
+}
+
+.btn-hold {
+  top: 545px;
+}
+
+.btn-new-game {
+  top: 50px;
+}
+
+.current-score {
+  position: relative;
+  top: 50px;
+  left: 120px;
+  font-size: 35px;
 }
