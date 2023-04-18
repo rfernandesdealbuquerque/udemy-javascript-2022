@@ -35,7 +35,7 @@ body {
   padding-top: 50px;
   padding-left: 150px;
   height: 100%;
-  width: 49%;
+  width: 607px;
 }
 
 .name {
@@ -109,12 +109,17 @@ button {
   left: 112px;
   font-size: 35px;
 }
-.player-active {
+.player-active-1 {
   background-color: rgba(255, 255, 255, 0.4);
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
 }
 
+.player-active-2 {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 .hidden-dice {
   display: none;
 }
