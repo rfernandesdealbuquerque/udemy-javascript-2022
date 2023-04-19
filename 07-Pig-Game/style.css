@@ -120,6 +120,19 @@ button {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+
+.player-winner-1 {
+  background-color: rgba(45, 198, 139, 0.533);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.player-winner-2{
+  background-color: rgba(45, 198, 139, 0.533);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+}
 .hidden-dice {
   display: none;
 }
