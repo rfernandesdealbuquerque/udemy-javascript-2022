@@ -1,3 +1,5 @@
+"use strict";
+
 const player1Element = document.querySelector(".player-1");
 const player2Element = document.querySelector(".player-2");
 const score1Element = document.querySelector(".score-1");
@@ -11,6 +13,8 @@ let currentScore = 0;
 let scores = [0,0];
 let activePlayer = 1;
 let playing = true;
+
+console.log(window);
 
 
 const switchPlayer = function(){
