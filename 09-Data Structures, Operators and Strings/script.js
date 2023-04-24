@@ -14,6 +14,10 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
 
   },
+
+  orderDelivery: function({time, client='rodrigo', address}){
+    console.log(time, address, client);
+  },
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
   openingHours: {
@@ -32,6 +36,33 @@ const restaurant = {
   },
 };
 
+
+restaurant.orderDelivery({
+    time: '22:30',
+    address: "via del sole",
+    client: 'other',
+})
+//-----------------DESCTRUCTURING OBJECTS-----------------------
+
+//Use curly braces and variables must have same names as object properties -- useful for dealing w/ result of API call
+const {name, openingHours, categories} = restaurant;
+
+//If want variables to have different names from properties
+const{name: restName, openingHours: hours, categories: tags} = restaurant;
+
+//Settin default values
+const{menu=[0]} = restaurant;
+
+//Mutating Variables (must use parentheses) - everything that starts with {} is interpreted as a code block for Javascript
+let h = 111;
+let f = 434;
+const obj = {h:23,f:56,g:45};
+
+({h,f} = obj);
+
+//Nested objects
+const {fri: {open:op,close:clo}} = openingHours;
+console.log(op,clo);
 
 
 //-----------------DESCTRUCTURING ARRAYS-----------------------
