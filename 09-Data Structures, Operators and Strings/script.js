@@ -42,6 +42,8 @@ restaurant.orderDelivery({
     address: "via del sole",
     client: 'other',
 })
+
+console.log(restaurant.orderPizza);
 //-----------------DESCTRUCTURING OBJECTS-----------------------
 
 //Use curly braces and variables must have same names as object properties -- useful for dealing w/ result of API call
