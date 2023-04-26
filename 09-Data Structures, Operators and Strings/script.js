@@ -90,11 +90,33 @@ const players1 = game.players[0];
 const players2 = game.players[1];
 console.log(players1, players2);
 
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
 
+const allPlayers = [...players1, ...players2];
+console.log(allPlayers);
 
+const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+console.log(players1Final);
 
+const {team1, x: draw, team2} = game.odds;
+console.log(team1, draw, team2);
 
+const printGoals = function (...players){
+    for (let i=0; i<players.length; i++){
+        console.log("Player: ", players[i]);
+    }
 
+    console.log("Goals: ", players.length);
+}
+
+printGoals('Davies', 'Muller', 'Lewandowski','Kimmich');
+printGoals(...game.scored);
+
+const winTeam1 = game.odds.team1 > game.odds.team2 || game.team1;
+const wintTeam2 = game.odds.team1 < game.odds.teams2 || game.team2;
+const winTeam = winTeam1 || wintTeam2;
+console.log(winTeam);
 
 //-----------------DESCTRUCTURING OBJECTS-----------------------
 
