@@ -155,8 +155,7 @@ console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
 console.log(`Odd of draw : ${game.odds.x}`);
 console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
 
-const scorers = {
-};
+const scorers = {};
 
 for (const player of game.scored){
     scorers[player] = 0;
@@ -166,8 +165,16 @@ for (const player of game.scored){
         (scorers[player]+=1);
     ;
 }
-
 console.log(scorers);
+
+const scorersSol = {};
+//if undefined, make it =1, otherwise add 1 to it
+for (const player of game.scored){
+    scorersSol[player] ? scorersSol[player]++ : scorersSol[player] = 1;
+}
+console.log(scorersSol);
+
+
 
 //--------------------------------------------------------------
 
