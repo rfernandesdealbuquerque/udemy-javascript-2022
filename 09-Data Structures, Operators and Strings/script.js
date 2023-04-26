@@ -151,9 +151,13 @@ for (const [goal, player] of game.scored.entries()){
 
 game.printAvgOdds();
 
-console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
-console.log(`Odd of draw : ${game.odds.x}`);
-console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+console.log(...Object.entries(game.odds));
+for(const [team, odd] of Object.entries(game.odds)){
+
+    const teamString = team === 'x' ? 'draw' : `victory ${game[team]}`;
+    console.log(`Odd of ${teamString}: ${odd}`);
+}
+
 
 const scorers = {};
 
@@ -168,8 +172,9 @@ for (const player of game.scored){
 console.log(scorers);
 
 const scorersSol = {};
-//if undefined, make it =1, otherwise add 1 to it
+//if property doesn't exit yet, it is undefined, so make it =1, otherwise add 1 to it
 for (const player of game.scored){
+    console.log(scorersSol[player]);
     scorersSol[player] ? scorersSol[player]++ : scorersSol[player] = 1;
 }
 console.log(scorersSol);
