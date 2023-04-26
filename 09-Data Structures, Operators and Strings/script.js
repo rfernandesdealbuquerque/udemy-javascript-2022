@@ -43,6 +43,13 @@ restaurant.orderDelivery({
     client: 'other',
 })
 
+
+const array = ["rodrigo", 0 , 'eliane'];
+array?.[1] ?? console.log('There is element.');
+
+
+
+
 //-------------CODING CHALLENGE #1------------------
 
 const game = {
@@ -84,6 +91,13 @@ const game = {
     team1: 1.33,
     x: 3.25,
     team2: 6.5,
+    },
+    printAvgOdds(){
+        let avgOdds = 0;
+        for (const odd of Object.values(this.odds)){
+            avgOdds+= odd;
+        }
+        console.log(avgOdds/Object.values(this.odds).length);
     },
 }
 /*
@@ -127,6 +141,33 @@ console.log(winTeam);
 
 team1 < team2 && console.log(`Team 1 wins: ${team1}`);
 team1 > team2 && console.log(`Team 2 wins: ${team2}`);
+
+//-------------------#CODING CHALLENGE 2-----------
+
+//console.log(...game.scored.entries());
+for (const [goal, player] of game.scored.entries()){
+    console.log(`Goal ${goal}: ${player}`);
+}
+
+game.printAvgOdds();
+
+console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+console.log(`Odd of draw : ${game.odds.x}`);
+console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+
+const scorers = {
+};
+
+for (const player of game.scored){
+    scorers[player] = 0;
+}
+for (const player of game.scored){
+    Object.keys(scorers).includes(player) &&
+        (scorers[player]+=1);
+    ;
+}
+
+console.log(scorers);
 
 //--------------------------------------------------------------
 
