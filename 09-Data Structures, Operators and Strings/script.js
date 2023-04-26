@@ -43,7 +43,7 @@ restaurant.orderDelivery({
     client: 'other',
 })
 
-//-------------CODING CHALLENGE------------------
+//-------------CODING CHALLENGE #1------------------
 
 const game = {
     team1: 'Bayern Munich',
@@ -96,6 +96,7 @@ console.log(gk, fieldPlayers);
 const allPlayers = [...players1, ...players2];
 console.log(allPlayers);
 
+
 const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 console.log(players1Final);
 
@@ -117,6 +118,9 @@ const winTeam1 = game.odds.team1 > game.odds.team2 || game.team1;
 const wintTeam2 = game.odds.team1 < game.odds.teams2 || game.team2;
 const winTeam = winTeam1 || wintTeam2;
 console.log(winTeam);
+console.log(winTeam);
+
+//--------------------------------------------------------------
 
 //-----------------DESCTRUCTURING OBJECTS-----------------------
 
