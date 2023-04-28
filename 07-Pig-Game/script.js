@@ -10,26 +10,23 @@ const diceElement = document.querySelector(".dice");
 player2Element.classList.remove("player-active-2");
 //Always good practice to keep track of our values with variables in our code instead of the DOM
 let currentScore = 0;
-let scores = [0,0];
+let scores = [0, 0];
 let activePlayer = 1;
 let playing = true;
 
 console.log(window);
 
+const switchPlayer = function () {
+  currentScore = 0;
+  document.querySelector(`.current-${activePlayer}`).textContent = currentScore;
 
-const switchPlayer = function(){
-    currentScore = 0;
-    document.querySelector(`.current-${activePlayer}`).textContent = currentScore;
-
-    document.querySelector(`.player-${activePlayer}`).classList.remove(`player-active-${activePlayer}`);
-    activePlayer = activePlayer === 1 ? 2 : 1;
-    document.querySelector(`.player-${activePlayer}`).classList.add(`player-active-${activePlayer}`);
-
-}
-
+  document.querySelector(`.player-${activePlayer}`).classList.remove(`player-active-${activePlayer}`);
+  activePlayer = activePlayer === 1 ? 2 : 1;
+  document.querySelector(`.player-${activePlayer}`).classList.add(`player-active-${activePlayer}`);
+};
 
 const rollDice = function () {
-  if(playing){
+  if (playing) {
     let randomRoll = Math.trunc(6 * Math.random() + 1);
 
     diceElement.classList.remove("hidden-dice");
@@ -42,33 +39,31 @@ const rollDice = function () {
     } else {
       //switch player and zero current score
       switchPlayer();
-  }
+    }
   }
 };
 
 const holdScore = function () {
-  if(playing){
-    scores[activePlayer-1] += currentScore; 
+  if (playing) {
+    scores[activePlayer - 1] += currentScore;
     const activePlayerScoreElement = document.querySelector(`.score-${activePlayer}`);
-    activePlayerScoreElement.textContent = scores[activePlayer-1];
+    activePlayerScoreElement.textContent = scores[activePlayer - 1];
 
-    if(scores[activePlayer-1] >= 20){
+    if (scores[activePlayer - 1] >= 20) {
       playing = false;
       document.querySelector(`.player-${activePlayer}`).classList.add(`player-winner-${activePlayer}`);
       document.querySelector(`.player-${activePlayer}`).classList.remove(`player-active-${activePlayer}`);
       diceElement.classList.add("hidden-dice");
-
-    }
-    else{
+    } else {
       switchPlayer();
     }
-    } 
+  }
 };
 
-const resetGame = function() {
-  //set current, score to zero 
+const resetGame = function () {
+  //set current, score to zero
   currentScore = 0;
-  scores = [0,0];
+  scores = [0, 0];
   currentScore1Element.textContent = 0;
   currentScore2Element.textContent = 0;
   score1Element.textContent = 0;
@@ -83,8 +78,7 @@ const resetGame = function() {
   diceElement.classList.add("hidden-dice");
   playing = true;
   activePlayer = 1;
-
-}
+};
 
 document.querySelector(".btn-roll-dice").addEventListener("click", rollDice);
 document.querySelector(".btn-hold").addEventListener("click", holdScore);

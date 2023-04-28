@@ -171,8 +171,8 @@ console.log(...gameEvents);
 const avgEventInterval = 90 / gameEvents.size;
 console.log(`An event happened, on average, every ${avgEventInterval} minutes`);
 
-for (const [key, value] of gameEvents) {
-  console.log(`[${key <= 45 ? "FIRST HALF " : "SECOND HALF"}] ${key}: ${value}`);
+for (const [min, event] of gameEvents) {
+  console.log(`[${min <= 45 ? "FIRST HALF " : "SECOND HALF"}] ${key}: ${value}`);
 }
 
 //-----------------DESCTRUCTURING OBJECTS-----------------------
