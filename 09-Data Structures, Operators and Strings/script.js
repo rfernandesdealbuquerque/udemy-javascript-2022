@@ -142,7 +142,7 @@ console.log(winTeam);
 team1 < team2 && console.log(`Team 1 wins: ${team1}`);
 team1 > team2 && console.log(`Team 2 wins: ${team2}`);
 
-//-------------------#CODING CHALLENGE 2-----------
+//------------------- CODING CHALLENGE #2-----------
 
 //console.log(...game.scored.entries());
 for (const [goal, player] of game.scored.entries()){
@@ -181,7 +181,31 @@ console.log(scorersSol);
 
 
 
-//--------------------------------------------------------------
+//----------------# CODING CHALLENGE #3-----------------------
+
+
+Const gameEvents = new Map([
+    [17, '⚽ GOAL'],
+    [36, '� Substitution'],
+    [47, '⚽ GOAL'],
+    [61, '� Substitution'],
+    [64, '� Yellow card'],
+    [69, '� Red card'],
+    [70, '� Substitution'],
+    [72, '� Substitution'],
+    [76, '⚽ GOAL'],
+    [80, '⚽ GOAL'],
+    [92, '� Yellow card'],
+    ]);
+
+
+
+
+
+
+
+
+
 
 //-----------------DESCTRUCTURING OBJECTS-----------------------
 
