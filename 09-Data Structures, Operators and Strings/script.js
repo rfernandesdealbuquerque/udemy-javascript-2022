@@ -43,6 +43,69 @@ restaurant.orderDelivery({
 const array = ["rodrigo", 0, "eliane"];
 array?.[1] ?? console.log("There is element.");
 
+//-------------WORKING WITH STRINGS - PART 1--------
+
+const airline = "TAP Air Portugal";
+const plane = "A320";
+
+console.log(plane[0]);
+console.log(airline.length);
+
+console.log(airline.slice(airline.indexOf("Air"), airline.lastIndexOf(" ")));
+console.log(airline.slice(-1)); //to get last letter of string
+
+console.log(new String("1"));
+
+//Everytime we receive an input from the user it is important to convert all letters to lower case
+
+//Split and Join
+const [firstName, lastName] = "Rodrigo Albuquerque".split(" ");
+console.log(["Mr.", firstName, "de", lastName].join(" "));
+
+const capitalizeName = function (name) {
+  const words = name.split(" ");
+  let newName = "";
+
+  for (const word of words) {
+    newName += word[0].toUpperCase() + word.slice(1) + " ";
+  }
+
+  return newName;
+};
+
+console.log(capitalizeName("jessica ann smith davis harris"));
+console.log(capitalizeName("rodrigo fernandes de albuquerque"));
+
+//-------------CODING CHALLENGE #4------------------
+
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
+const buttonElement = document.querySelector("button");
+buttonElement.style.height = "30px";
+buttonElement.style.width = "60px";
+buttonElement.textContent = "Press!";
+
+const convertText = function () {
+  const text = document.querySelector("textarea").value;
+  const words = text.split("\n");
+  console.log(words);
+  let newText = "";
+  let biggestLength = 0;
+  for (const word of words) {
+    biggestLength = word.length > biggestLength ? word.length : biggestLength;
+  }
+
+  for (const [position, word] of words.entries()) {
+    const [firstPart, secondPart] = word.toLowerCase().trim().split("_");
+    newText += (firstPart + secondPart.replace(secondPart[0], secondPart[0].toUpperCase())).padEnd(biggestLength, " ") + "✅".repeat(position + 1) + "\n";
+  }
+
+  console.log(newText);
+};
+
+console.log("delayedDeparture".length);
+buttonElement.addEventListener("click", convertText);
+
 //-------------CODING CHALLENGE #1------------------
 
 const game = {
@@ -172,9 +235,8 @@ const avgEventInterval = 90 / gameEvents.size;
 console.log(`An event happened, on average, every ${avgEventInterval} minutes`);
 
 for (const [min, event] of gameEvents) {
-  console.log(`[${min <= 45 ? "FIRST HALF " : "SECOND HALF"}] ${key}: ${value}`);
+  console.log(`[${min <= 45 ? "FIRST HALF " : "SECOND HALF"}] ${min}: ${event}`);
 }
-
 //-----------------DESCTRUCTURING OBJECTS-----------------------
 
 //Use curly braces and variables must have same names as object properties -- useful for dealing w/ result of API call
